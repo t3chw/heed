@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Heed</title>
+<meta name="description" content="Heed's privacy policy. Voice transcription, parsing, and search all run on your device. Nothing leaves your phone except the one-time model download.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Heed — Privacy">
+<meta property="og:description" content="Voice transcription, parsing, and search all run on your device. Nothing leaves your phone except the one-time model download.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://heed.app/privacy">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream:    #FFF9F0;
+    --cream-2:  #F7EEDF;
+    --cream-3:  #EFE3CE;
+    --ink:      #2A2420;
+    --ink-2:    #4A3F38;
+    --ink-3:    #7A6E63;
+    --line:     #E8DAC0;
+    --terra:    #D97757;
+    --terra-2:  #B95A3D;
+    --sage:     #7A8B6F;
+
+    --font-display: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    --font-ui:      "Geist", "Inter", -apple-system, system-ui, sans-serif;
+    --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: var(--terra-2); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+
+  .nav {
+    border-bottom: 1px solid var(--line);
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 249, 240, 0.92);
+  }
+  .nav-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 22px;
+  }
+  .logo-mark {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--terra);
+    color: var(--cream);
+    display: grid; place-items: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .nav-back {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-decoration: none;
+  }
+  .nav-back:hover { color: var(--terra-2); }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--terra-2);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  h1 em { color: var(--terra-2); font-style: italic; }
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    margin-top: 10px;
+  }
+
+  .tldr {
+    margin-top: 32px;
+    background: var(--cream-2);
+    border: 1px solid var(--line);
+    border-radius: 22px 24px 21px 23px / 23px 21px 24px 22px;
+    padding: 26px 28px;
+  }
+  .tldr h2 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .tldr h2 em { color: var(--terra-2); font-style: italic; }
+  .tldr ul {
+    margin: 0;
+    padding-left: 22px;
+  }
+  .tldr li { margin: 6px 0; }
+  .tldr strong { color: var(--ink); }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 56px 0 14px;
+    color: var(--ink);
+  }
+  h2 em { color: var(--terra-2); font-style: italic; }
+
+  h3 {
+    font-family: var(--font-ui);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 28px 0 8px;
+    color: var(--ink);
+  }
+
+  p { margin: 12px 0; color: var(--ink-2); }
+  p strong { color: var(--ink); }
+  ul, ol { color: var(--ink-2); }
+  li { margin: 6px 0; }
+  li strong { color: var(--ink); }
+
+  .perm-table {
+    width: 100%;
+    margin: 18px 0 8px;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  .perm-table th, .perm-table td {
+    border-bottom: 1px solid var(--line);
+    padding: 12px 10px;
+    vertical-align: top;
+    text-align: left;
+  }
+  .perm-table th {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--ink-3);
+  }
+  .perm-table code {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--ink);
+    background: var(--cream-2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .perm-table .why { color: var(--ink-2); }
+
+  .callout {
+    margin: 18px 0;
+    padding: 14px 18px;
+    border-left: 3px solid var(--terra);
+    background: rgba(217, 119, 87, 0.08);
+    border-radius: 4px;
+    font-size: 15.5px;
+    color: var(--ink-2);
+  }
+  .callout strong { color: var(--ink); }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 56px 0 20px;
+  }
+
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px 24px 40px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer a { color: var(--ink-3); text-decoration: none; }
+  footer a:hover { color: var(--terra-2); }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    h1 { font-size: 40px; }
+    h2 { font-size: 26px; margin-top: 44px; }
+    main { padding: 32px 20px 60px; }
+    .perm-table { font-size: 14px; }
+    .perm-table code { font-size: 11.5px; white-space: normal; word-break: break-word; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark">H</span>
+      <span>Heed</span>
+    </a>
+    <a href="/" class="nav-back">← Back to home</a>
+  </div>
+</nav>
+
+<main>
+  <span class="eyebrow">Privacy policy</span>
+  <h1>Your data <em>stays with you.</em></h1>
+  <p class="meta">Effective: 3 May 2026 · Last updated: 3 May 2026</p>
+
+  <div class="tldr">
+    <h2>The <em>short version.</em></h2>
+    <ul>
+      <li><strong>Heed runs entirely on your device.</strong> Your voice, transcripts, items, and search history never leave your phone.</li>
+      <li><strong>We don't have a server for your data.</strong> No accounts, no cloud sync, no telemetry, no analytics, no ads, no tracking.</li>
+      <li><strong>The only network call</strong> is a one-time download of the AI model files (~2.7 GB total) from HuggingFace, with a Cloudflare R2 mirror as a fallback. After that, you can use the app fully offline.</li>
+    </ul>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Heed is an Android application (with iOS planned for a future release) that turns voice notes into sorted, searchable items, all on your device. This privacy policy explains what data Heed handles, where it's stored, and what — if anything — leaves your phone.</p>
+  <p>For privacy questions, contact us at <a href="mailto:privacy@heed.app">privacy@heed.app</a>.</p>
+
+  <h2>2. The short version, in plain English</h2>
+  <p>You speak. Heed transcribes you, categorises what you said, and saves it as items inside the app. Every step of that pipeline runs on your device. We don't have a backend to send your data to, and we haven't built one — that absence is the whole product.</p>
+  <p>The single exception is downloading the AI model files the first time you set up the app. That download contacts HuggingFace and (if HuggingFace is unavailable in your region) a Cloudflare R2 mirror we operate. We explain that call in detail in <a href="#network">section 5</a>.</p>
+
+  <h2>3. What Heed handles on your device</h2>
+  <p>While you use Heed, the following data is created and stored locally on your phone:</p>
+  <ul>
+    <li><strong>Voice recordings</strong> (WAV files in app-private storage). Created when you tap the mic. Deleted automatically once transcription completes, or kept in History if you've enabled that — your choice, in Settings.</li>
+    <li><strong>Transcripts</strong> of what you said.</li>
+    <li><strong>Items</strong> Heed extracted from your speech: tasks, shopping items, ideas, reminders, journal entries, and so on, including the category Heed assigned, any reminder time you set, and any tags it attached.</li>
+    <li><strong>Search queries</strong> you type or speak in Heed's search bar, and the synthesised answers Heed produces.</li>
+    <li><strong>Settings</strong> you choose: theme, time format, default categories, on-device speech engine, daily-digest preferences.</li>
+    <li><strong>Diagnostic logs</strong> Heed writes locally to help you (or our support, if you choose to share) understand performance and crash behaviour. These never auto-upload anywhere.</li>
+  </ul>
+  <p>All of the above lives in your app's private storage area. Other apps cannot read it, and Heed does not transmit it.</p>
+
+  <h2>4. What <em>never</em> leaves your device</h2>
+  <p>To be unambiguous: Heed does not send your voice, transcripts, items, search history, or any other content you create with the app to any server, ours or anybody else's. There is no cloud sync. There are no analytics events. There is no crash-reporting SDK uploading anything. There are no advertising identifiers being read or sent.</p>
+  <p>You can verify this yourself in Android Settings → Apps → Heed → Mobile data. After the one-time model download (section 5) the number stays at zero, even after weeks of regular use.</p>
+
+  <h2 id="network">5. The one network call: the model download</h2>
+  <p>Heed needs an AI language model and a speech-recognition model to function. These are large files we do not embed in the app itself, because that would bloat the install size and prevent updates. The first time you set up the app — and only then — Heed downloads them:</p>
+  <ul>
+    <li><strong>Gemma 4 E2B</strong> language model (~2.4 GB) from <a href="https://huggingface.co/litert-community" rel="noopener" target="_blank">huggingface.co/litert-community</a>.</li>
+    <li><strong>Whisper Small</strong> speech-recognition model (~280 MB across three files) from <a href="https://huggingface.co/csukuangfj" rel="noopener" target="_blank">huggingface.co/csukuangfj</a>.</li>
+    <li>If HuggingFace is unavailable in your region or temporarily down, Heed falls back to a Cloudflare R2 mirror we host at <code>pub-33cceff19bc44aa1a7a000f377d71685.r2.dev</code> with byte-identical copies. The mirror is verified by SHA-256 hash before use.</li>
+  </ul>
+  <p>The HTTP request to HuggingFace and (if used) Cloudflare consists of standard download metadata: your IP address (so they can return a response) and a generic User-Agent. Neither party is told who you are, what device you're on beyond that, or what you're going to do with the model.</p>
+  <p>We do not see this request at all. HuggingFace and Cloudflare do see it, in the same way they see any download, and you are subject to their respective privacy policies for that one transaction:</p>
+  <ul>
+    <li><a href="https://huggingface.co/privacy" rel="noopener" target="_blank">HuggingFace Privacy Policy</a></li>
+    <li><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Cloudflare Privacy Policy</a></li>
+  </ul>
+  <p>Once the download completes and the SHA-256 of each file is verified, Heed never contacts these endpoints again unless you explicitly delete the model and reinstall it. The app works fully offline from that point on. You can put your phone in airplane mode and use Heed normally.</p>
+
+  <h2>6. Permissions Heed asks for</h2>
+  <p>The Android system requires apps to declare the permissions they use. Here is the complete list, with why each one is needed:</p>
+
+  <table class="perm-table">
+    <thead>
+      <tr><th>Permission</th><th>Why Heed needs it</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>RECORD_AUDIO</code></td>
+        <td class="why">Recording your voice when you tap the mic. The audio is processed on-device by the speech-recognition model and never sent anywhere.</td>
+      </tr>
+      <tr>
+        <td><code>INTERNET</code></td>
+        <td class="why">Used only for the one-time model download described in section 5. Once the model is on your device, no further network calls are made.</td>
+      </tr>
+      <tr>
+        <td><code>POST_NOTIFICATIONS</code></td>
+        <td class="why">Showing reminder notifications you've explicitly set, and a foreground-service notification while voice processing is happening.</td>
+      </tr>
+      <tr>
+        <td><code>SCHEDULE_EXACT_ALARM</code> · <code>USE_EXACT_ALARM</code></td>
+        <td class="why">Firing reminders at the precise time you asked for ("remind me at 3 pm"), instead of within a fuzzy window the OS chooses.</td>
+      </tr>
+      <tr>
+        <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+        <td class="why">Re-scheduling your pending reminders after the device reboots, so a restart doesn't lose them.</td>
+      </tr>
+      <tr>
+        <td><code>FOREGROUND_SERVICE</code> · <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td>
+        <td class="why">Running on-device AI inference (transcription and categorisation) while the app is in the background, with a status notification so you can see what's happening. The "special use" subtype is declared as <code>on_device_ai_processing</code>.</td>
+      </tr>
+      <tr>
+        <td><code>FOREGROUND_SERVICE_DATA_SYNC</code></td>
+        <td class="why">Used by the model-download flow to keep downloading even if you switch apps, with a progress notification.</td>
+      </tr>
+      <tr>
+        <td><code>WAKE_LOCK</code></td>
+        <td class="why">Keeping the CPU awake during a voice-processing run so it doesn't slow to a crawl when the screen turns off (e.g., if you record from the lock screen). Released the moment processing finishes.</td>
+      </tr>
+      <tr>
+        <td><code>VIBRATE</code></td>
+        <td class="why">Standard haptic feedback for notifications.</td>
+      </tr>
+      <tr>
+        <td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
+        <td class="why">Optional. On phones with aggressive battery management (Xiaomi, Oppo, Vivo, OnePlus, some Samsung configurations), the OS can throttle Heed so much that lock-screen voice notes take minutes to finish. Heed asks for this exemption only if you opt in via Settings → "Allow background processing." You can revoke it any time.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>iOS, when released:</strong> Heed for iOS will follow the same on-device privacy model. iOS uses a different permission system (microphone, notifications, etc.); we will update this page with the exact list and rationales when iOS ships. The data-handling principles in sections 3 and 4 will be identical.
+  </div>
+
+  <h2>7. Storage and deletion</h2>
+  <p>All your Heed data lives in your phone's app-private storage area, which is sandboxed by the operating system. Other apps cannot access it without root. Heed itself does not encrypt the database beyond what Android's full-device encryption already provides — so your phone's lock screen is what's keeping your data safe at rest.</p>
+  <h3>Exporting your data</h3>
+  <p>Settings → Data → Export as JSON gives you a complete copy of your items, recordings metadata, transcripts, and categories in a machine-readable file. You pick where to save it.</p>
+  <h3>Deleting your data</h3>
+  <p>You have several ways to remove data:</p>
+  <ul>
+    <li><strong>Delete a single item</strong> — long-press in the category screen, or open it and tap delete.</li>
+    <li><strong>Delete a recording</strong> — in History, swipe or open the recording detail.</li>
+    <li><strong>Wipe everything</strong> — Android Settings → Apps → Heed → Storage → Clear data. Removes the database, all recordings, all settings, and the downloaded model. The app returns to a fresh-install state.</li>
+    <li><strong>Uninstall the app</strong> — removes everything Heed ever wrote to your device. Because nothing was ever uploaded, there is no copy elsewhere.</li>
+  </ul>
+
+  <h2>8. Security</h2>
+  <p>Heed is open about how it works. The core privacy claim — "nothing leaves the device except the model download" — is structurally enforced: the app contains no analytics SDK, no crash-reporter SDK, no advertising library, no Firebase, no Google Sign-In, and no remote API client. You can verify this with a network monitor (e.g., your router logs, or an on-device packet capture tool) on a real device.</p>
+  <p>The one-time model download is verified by SHA-256 hash before the file is loaded — a corrupted or tampered file is detected and rejected.</p>
+  <p>Because Heed has no servers, there is no server-side data breach scenario for your content. The remaining attack surface is your physical device; we recommend the usual precautions (a strong lock screen, OS updates, full-disk encryption — which is standard on modern Android).</p>
+
+  <h2>9. Children's privacy</h2>
+  <p>Heed is not directed at children under 13 (or the relevant age in your jurisdiction). We do not knowingly collect personal information from children. Because Heed does not collect personal information from anyone, this is structurally true rather than a promise we have to actively enforce — but we want to be explicit about it.</p>
+
+  <h2>10. International users</h2>
+  <h3>European Economic Area / United Kingdom (GDPR)</h3>
+  <p>Under the GDPR, you have rights to access, correct, delete, restrict, and port "your personal data" held by data controllers. Heed does not act as a data controller for the content you create in the app — that data lives only on your device, under your direct control. You can therefore exercise all of those rights directly: open the app, view, edit, delete, or export, as described in section 7. We hold no copy.</p>
+  <p>If you contact us at <a href="mailto:privacy@heed.app">privacy@heed.app</a>, the email itself is processed by our email provider for the purpose of replying to you. That message is the only personal data you would have shared with us.</p>
+  <h3>California (CCPA / CPRA)</h3>
+  <p>We do not "sell" or "share" personal information as those terms are defined under the CCPA / CPRA. We do not collect personal information from California residents through the app. The right-to-know, right-to-delete, and right-to-opt-out provisions therefore have no data on our side to act against; everything is on your device.</p>
+  <h3>Other jurisdictions</h3>
+  <p>The structural fact that Heed does not collect or transmit your personal data means most regional privacy regulations (Canada's PIPEDA, Brazil's LGPD, Australia's Privacy Act, India's DPDP Act, etc.) impose no additional obligations on us. If you have a specific question, write to us.</p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>We will update this policy if we change anything material — for example, adding iOS, adding an opt-in cloud-sync feature (which we have no plans to do), or changing the model-download mirrors. The "Last updated" date at the top of this page reflects the most recent change. Material changes will also be surfaced in the app's release notes.</p>
+  <p>We will not retroactively expand what data is collected without explicit opt-in from you. If a future feature ever requires sending something off-device, that feature will be disabled by default and clearly described before you enable it.</p>
+
+  <h2>12. Contact</h2>
+  <p>For privacy questions, data requests, or anything else covered by this policy, write to <a href="mailto:privacy@heed.app">privacy@heed.app</a>.</p>
+  <p>For general support or feedback, see <a href="/">heed.app</a>.</p>
+
+  <hr>
+  <p style="font-size: 14px; color: var(--ink-3);">This page is plain HTML, has no third-party scripts, sets no cookies, and uses no tracking pixels. The only third-party request it makes is fetching the Geist and Instrument Serif typefaces from Google Fonts on first load (cached by your browser thereafter). If you would prefer the page never contact Google Fonts, your browser's "block third-party requests" or an extension like uBlock Origin will substitute system fonts without affecting readability.</p>
+</main>
+
+<footer>
+  <span>© 2026 Heed</span>
+  <span>
+    <a href="/">heed.app</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:privacy@heed.app">privacy@heed.app</a>
+  </span>
+</footer>
+
+</body>
+</html>
