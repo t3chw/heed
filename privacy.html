@@ -4,257 +4,234 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy — Heed</title>
-<meta name="description" content="Heed's privacy policy. Voice transcription, parsing, and search all run on your device. Nothing leaves your phone except the one-time model download.">
+<meta name="description" content="Heed's privacy policy. Voice transcription, parsing, and search all run on your device. Heed has no internet permission, so nothing leaves your phone.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Heed — Privacy">
-<meta property="og:description" content="Voice transcription, parsing, and search all run on your device. Nothing leaves your phone except the one-time model download.">
+<meta property="og:description" content="Voice transcription, parsing, and search all run on your device. Heed has no internet permission, so nothing leaves your phone.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream:    #FFF9F0;
-    --cream-2:  #F7EEDF;
-    --cream-3:  #EFE3CE;
-    --ink:      #2A2420;
-    --ink-2:    #4A3F38;
-    --ink-3:    #7A6E63;
-    --line:     #E8DAC0;
-    --terra:    #D97757;
-    --terra-2:  #B95A3D;
-    --sage:     #7A8B6F;
-
-    --font-display: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
-    --font-ui:      "Geist", "Inter", -apple-system, system-ui, sans-serif;
-    --font-mono:    "JetBrains Mono", ui-monospace, monospace;
-  }
-
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: var(--font-ui);
-    font-size: 17px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-
-  a { color: var(--terra-2); text-decoration: underline; text-underline-offset: 3px; }
-  a:hover { color: var(--ink); }
-
-  .nav {
-    border-bottom: 1px solid var(--line);
-    background: var(--cream);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    backdrop-filter: blur(6px);
-    background: rgba(255, 249, 240, 0.92);
-  }
-  .nav-inner {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--ink);
-    font-family: var(--font-display);
-    font-size: 22px;
-  }
-  .logo-mark {
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    background: var(--terra);
-    color: var(--cream);
-    display: grid; place-items: center;
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 18px;
-    line-height: 1;
-  }
-  .nav-back {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    text-decoration: none;
-  }
-  .nav-back:hover { color: var(--terra-2); }
-
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-  }
-
-  .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    color: var(--terra-2);
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    display: inline-block;
-  }
-  h1 {
-    font-family: var(--font-display);
-    font-size: 56px;
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin: 0 0 8px;
-  }
-  h1 em { color: var(--terra-2); font-style: italic; }
-  .meta {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    color: var(--ink-3);
-    margin-top: 10px;
-  }
-
-  .tldr {
-    margin-top: 32px;
-    background: var(--cream-2);
-    border: 1px solid var(--line);
-    border-radius: 22px 24px 21px 23px / 23px 21px 24px 22px;
-    padding: 26px 28px;
-  }
-  .tldr h2 {
-    font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 400;
-    margin: 0 0 14px;
-    color: var(--ink);
-  }
-  .tldr h2 em { color: var(--terra-2); font-style: italic; }
-  .tldr ul {
-    margin: 0;
-    padding-left: 22px;
-  }
-  .tldr li { margin: 6px 0; }
-  .tldr strong { color: var(--ink); }
-
-  h2 {
-    font-family: var(--font-display);
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.15;
-    margin: 56px 0 14px;
-    color: var(--ink);
-  }
-  h2 em { color: var(--terra-2); font-style: italic; }
-
-  h3 {
-    font-family: var(--font-ui);
-    font-size: 17px;
-    font-weight: 600;
-    margin: 28px 0 8px;
-    color: var(--ink);
-  }
-
-  p { margin: 12px 0; color: var(--ink-2); }
-  p strong { color: var(--ink); }
-  ul, ol { color: var(--ink-2); }
-  li { margin: 6px 0; }
-  li strong { color: var(--ink); }
-
-  .perm-table {
-    width: 100%;
-    margin: 18px 0 8px;
-    border-collapse: collapse;
-    font-size: 15px;
-  }
-  .perm-table th, .perm-table td {
-    border-bottom: 1px solid var(--line);
-    padding: 12px 10px;
-    vertical-align: top;
-    text-align: left;
-  }
-  .perm-table th {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    font-weight: 600;
-    border-bottom: 1.5px solid var(--ink-3);
-  }
-  .perm-table code {
-    font-family: var(--font-mono);
-    font-size: 12.5px;
-    color: var(--ink);
-    background: var(--cream-2);
-    padding: 2px 6px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-  .perm-table .why { color: var(--ink-2); }
-
-  .callout {
-    margin: 18px 0;
-    padding: 14px 18px;
-    border-left: 3px solid var(--terra);
-    background: rgba(217, 119, 87, 0.08);
-    border-radius: 4px;
-    font-size: 15.5px;
-    color: var(--ink-2);
-  }
-  .callout strong { color: var(--ink); }
-
-  hr {
-    border: none;
-    border-top: 1px solid var(--line);
-    margin: 56px 0 20px;
-  }
-
-  footer {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 16px 24px 40px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    color: var(--ink-3);
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  footer a { color: var(--ink-3); text-decoration: none; }
-  footer a:hover { color: var(--terra-2); }
-
-  @media (max-width: 600px) {
-    body { font-size: 16px; }
-    h1 { font-size: 40px; }
-    h2 { font-size: 26px; margin-top: 44px; }
-    main { padding: 32px 20px 60px; }
-    .perm-table { font-size: 14px; }
-    .perm-table code { font-size: 11.5px; white-space: normal; word-break: break-word; }
-  }
-</style>
+:root{--bg:#FFFFFF;--soft:#F7F7F5;--ink:#191919;--ink-2:#37352F;--ink-3:#787774;--line:#E9E9E7;--brand:#2F8A4C;--brand-soft:#EAF5EC;--ui:"Inter",system-ui,-apple-system,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink-2);font:16.5px/1.65 var(--ui);-webkit-font-smoothing:antialiased}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}a:hover{text-decoration-color:var(--ink)}
+nav.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:760px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,env(safe-area-inset-right,0px)) 0 max(20px,env(safe-area-inset-left,0px))}
+.logo{display:flex;align-items:center;gap:8px;color:var(--ink);font:750 19px var(--ui);text-decoration:none}.logo-mark{display:none}
+.nav-back{font:500 14px var(--ui);color:var(--ink-3);text-decoration:none}.nav-back:hover{color:var(--ink)}
+main{max-width:760px;margin:0 auto;padding:52px max(20px,env(safe-area-inset-right,0px)) 80px max(20px,env(safe-area-inset-left,0px))}
+.eyebrow{display:inline-flex;font:600 13px var(--ui);color:var(--brand);background:var(--brand-soft);padding:5px 11px;border-radius:999px}
+h1,h2,h3{color:var(--ink);letter-spacing:-.025em}h1 em,h2 em{font-style:normal}
+main h1{font-size:clamp(36px,5vw,52px);line-height:1.05;font-weight:800;margin:16px 0 8px}
+main h2{font-size:26px;font-weight:750;margin:52px 0 12px}main h3{font-size:17px;margin:26px 0 8px}
+.meta{font:13px var(--ui);color:var(--ink-3)}
+.tldr{margin-top:28px;background:var(--soft);border-radius:14px;padding:22px 24px}.tldr h2{margin:0 0 10px;font-size:19px}.tldr ul{margin:0;padding-left:20px}.tldr li{margin:6px 0}
+strong{color:var(--ink)}
+.perm-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}.perm-table td,.perm-table th{border-bottom:1px solid var(--line);padding:11px 10px;text-align:left;vertical-align:top}
+.perm-table th{font-weight:600;color:var(--ink-3)}.perm-table td:first-child{width:38%}
+code{font:12.5px var(--mono);background:var(--soft);padding:2px 6px;border-radius:5px;color:#C0392B;word-break:break-word}
+.callout{margin:18px 0;padding:14px 18px;background:var(--soft);border-radius:10px}
+hr{border:0;border-top:1px solid var(--line);margin:52px 0 20px}
+body>footer{max-width:760px;margin:0 auto;padding:16px 20px 40px;display:flex;justify-content:space-between;font-size:13px;color:var(--ink-3)}body>footer a{color:var(--ink-3)}
+@keyframes skein-breathe { 
+  0%, 100% { transform: translateY(0px) scale(1, 1); }
+  50% { transform: translateY(-1.5px) scale(1.015, 0.985); }
+}
+@keyframes skein-blink { 
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%, 97% { transform: scaleY(0.1); }
+}
+@keyframes skein-bob { 
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-6px) rotate(1.5deg); }
+}
+@keyframes skein-wobble { 
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+@keyframes pulse-ring { 
+  0% { transform: scale(1); opacity: 0.55; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes skein-spin { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes wave { 
+  0%, 100% { transform: scaleY(0.25); }
+  50% { transform: scaleY(1); }
+}
+@keyframes float-dot { 
+  0%, 100% { transform: translateY(0px); opacity: 0.6; }
+  50% { transform: translateY(-8px); opacity: 1; }
+}
+.eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--ink-3); display: inline-block; }
+@keyframes float-bub { 
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+  50% { transform: translateY(-8px) rotate(calc(var(--rot, 0deg) + 1deg)); }
+}
+@keyframes mh-wave { 
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+.skein-sprout { --leaf: #9FC28F; --leaf-dark: #6F9764; --leaf-light: #B9D4AC; --bulb: #A8CF97; --bulb-shade: #7FA76F; --pot: #C97A55; --pot-shade: #A65F3E; --soil: #3A2618; --ink: #2A1F18; --blush: #E9A9A0; --terra: #D97757; --sun: #E9C89C; }
+.skein-sprout .ink { stroke: var(--ink); stroke-linecap: round; stroke-linejoin: round; }
+.skein-sprout .pot { fill: var(--pot); }
+.skein-sprout .pot-shade { fill: var(--pot-shade); opacity: 0.4; }
+.skein-sprout .pot-rim { fill: var(--pot); }
+.skein-sprout .soil { fill: var(--soil); }
+.skein-sprout .soil-speck { fill: rgb(42, 24, 16); }
+.skein-sprout .bulb { fill: var(--bulb); }
+.skein-sprout .bulb-shade { fill: var(--bulb-shade); opacity: 0.6; }
+.skein-sprout .sprig { fill: var(--leaf-dark); }
+.skein-sprout .stem { fill: var(--leaf-dark); stroke: var(--ink); }
+.skein-sprout .sprig-leaf { fill: var(--leaf-light); stroke: var(--ink); stroke-linejoin: round; }
+.skein-sprout .leaf { fill: var(--leaf); }
+.skein-sprout .leaf-vein { stroke: var(--leaf-dark); stroke-width: 1.5; fill: none; stroke-linecap: round; }
+.skein-sprout .eye { fill: var(--ink); }
+.skein-sprout .pupil { fill: rgb(255, 249, 240); }
+.skein-sprout .mouth { fill: none; stroke: var(--ink); stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.skein-sprout .blush { fill: var(--blush); opacity: 0.6; }
+.skein-sprout .sp-shadow { fill: rgba(0, 0, 0, 0.15); }
+.skein-sprout .mgrp { display: none; }
+.skein-sprout .m-default { display: block; }
+.skein-sprout .eyes-happy, .skein-sprout .eyes-sleep, .skein-sprout .eyes-stars { display: none; }
+@keyframes skein-breathe { 
+  0%, 100% { transform: translateY(0px) scale(1, 1); }
+  50% { transform: translateY(-3px) scale(1.025, 1.03); }
+}
+@keyframes skein-calm-lift { 
+  0%, 100% { transform: translateY(0px) scale(1, 1) rotate(-1.5deg); }
+  50% { transform: translateY(-4px) scale(1.03, 1.04) rotate(1.5deg); }
+}
+@keyframes skein-listen-lean { 
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-1px) rotate(2deg); }
+}
+@keyframes skein-tilt { 
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-6deg); }
+}
+@keyframes skein-tilt-alt { 
+  0% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
+  100% { transform: rotate(-7deg); }
+}
+@keyframes skein-party-sway { 
+  0%, 100% { transform: translateY(0px) rotate(-3deg); }
+  50% { transform: translateY(-3px) rotate(3deg); }
+}
+@keyframes skein-sprig-wiggle { 
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes skein-leaf-l { 
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-5deg); }
+}
+@keyframes skein-leaf-r { 
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+@keyframes skein-blink { 
+  0%, 92%, 100% { transform: scaleY(1); }
+  94%, 98% { transform: scaleY(0.1); }
+}
+@keyframes skein-eye-look-up { 
+  0%, 30%, 100% { transform: translateY(0px); }
+  50%, 80% { transform: translateY(-2px); }
+}
+@keyframes skein-eye-dart { 
+  0%, 100% { transform: translateX(0px); }
+  25% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+}
+@keyframes skein-shadow { 
+  0%, 100% { transform: scaleX(1); opacity: 0.15; }
+  50% { transform: scaleX(0.9); opacity: 0.1; }
+}
+.skein-sprout[data-s="idle"] .sp-body { animation: 3.6s ease-in-out 0s infinite normal none running skein-breathe; transform-origin: center bottom; }
+.skein-sprout[data-s="idle"] .sp-sprig { animation: 3.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="idle"] .sp-leaf-l { animation: 4.4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="idle"] .sp-leaf-r { animation: 4.6s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="idle"] .sp-eye { animation: 5.5s ease 0s infinite normal none running skein-blink; transform-origin: center center; }
+.skein-sprout[data-s="listen"] .sp-body { animation: 2.4s ease-in-out 0s infinite normal none running skein-listen-lean; transform-origin: center bottom; }
+.skein-sprout[data-s="listen"] .sp-sprig { animation: 3.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="listen"] .sp-leaf-l { animation: 4.4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="listen"] .sp-leaf-r { animation: 4.6s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="listen"] .sp-eye { animation: 6s ease 0s infinite normal none running skein-blink; transform-origin: center center; }
+.skein-sprout[data-s="listen"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="listen"] .mgrp.m-listen { display: block; }
+.skein-sprout[data-s="think"] .sp-body { animation: 3.2s ease-in-out 0s infinite normal none running skein-tilt; transform-origin: center bottom; }
+.skein-sprout[data-s="think"] .sp-sprig { animation: 6s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="think"] .sp-eyes { animation: 3.2s ease-in-out 0s infinite normal none running skein-eye-look-up; }
+.skein-sprout[data-s="think"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="think"] .mgrp.m-think { display: block; }
+.skein-sprout[data-s="happy"] .sp-body { animation: 3.2s ease-in-out 0s infinite normal none running skein-calm-lift; transform-origin: center bottom; }
+.skein-sprout[data-s="happy"] .sp-sprig { animation: 3.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="happy"] .sp-leaf-l { animation: 4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="happy"] .sp-leaf-r { animation: 4.2s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="happy"] .eyes-open { display: none; }
+.skein-sprout[data-s="happy"] .eyes-happy { display: block; }
+.skein-sprout[data-s="happy"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="happy"] .mgrp.m-happy { display: block; }
+.skein-sprout[data-s="sleep"] .sp-body { animation: 5s ease-in-out 0s infinite normal none running skein-breathe; transform-origin: center bottom; }
+.skein-sprout[data-s="sleep"] .sp-sprig { animation: 8s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="sleep"] .eyes-open { display: none; }
+.skein-sprout[data-s="sleep"] .eyes-sleep { display: block; }
+.skein-sprout[data-s="sleep"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="sleep"] .mgrp.m-sleep { display: block; }
+.skein-sprout[data-s="confused"] .sp-body { animation: 1.4s ease-in-out 0s infinite normal none running skein-tilt-alt; transform-origin: center bottom; }
+.skein-sprout[data-s="confused"] .sp-sprig { animation: 1.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="confused"] .sp-eyes { animation: 3s ease-in-out 0s infinite normal none running skein-eye-dart; }
+.skein-sprout[data-s="confused"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="confused"] .mgrp.m-confused { display: block; }
+.skein-sprout[data-s="party"] .sp-body { animation: 2.2s ease-in-out 0s infinite normal none running skein-party-sway; transform-origin: center bottom; }
+.skein-sprout[data-s="party"] .sp-sprig { animation: 2.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="party"] .sp-leaf-l { animation: 2.4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="party"] .sp-leaf-r { animation: 2.4s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="party"] .eyes-open { display: none; }
+.skein-sprout[data-s="party"] .eyes-happy { display: block; }
+.skein-sprout[data-s="party"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="party"] .mgrp.m-party { display: block; }
+.skein-sprout .sp-leaf-l, .skein-sprout .sp-leaf-r, .skein-sprout .sp-sprig, .skein-sprout .sp-bulb-g, .skein-sprout .sp-bud, .skein-sprout .sp-bloom, .skein-sprout .sp-leaf-extra, .skein-sprout .sp-stem { transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 400ms; }
+.skein-sprout[data-g="seed"] .sp-leaf-l, .skein-sprout[data-g="seed"] .sp-leaf-r, .skein-sprout[data-g="seed"] .sp-sprig, .skein-sprout[data-g="seed"] .sp-bud, .skein-sprout[data-g="seed"] .sp-bloom { display: none; }
+.skein-sprout[data-g="seed"] .sp-stem { transform: scaleY(0.25); transform-origin: 100px 218px; }
+.skein-sprout[data-g="seed"] .sp-bulb-g { transform: translate(0px, 48px) scale(0.55); transform-origin: 100px 150px; }
+.skein-sprout[data-g="sprout"] .sp-bud, .skein-sprout[data-g="sprout"] .sp-bloom { display: none; }
+.skein-sprout[data-g="sprout"] .sp-leaf-l, .skein-sprout[data-g="sprout"] .sp-leaf-r { transform: scale(0.85); }
+.skein-sprout[data-g="lush"] .sp-bud, .skein-sprout[data-g="lush"] .sp-bloom { display: none; }
+.skein-sprout[data-g="lush"] .sp-leaf-l { transform: scale(1.08); }
+.skein-sprout[data-g="lush"] .sp-leaf-r { transform: scale(1.08); }
+.skein-sprout[data-g="lush"] .sp-sprig { transform: scale(1.1); transform-origin: 100px 95px; }
+.skein-sprout[data-g="lush"] .sp-leaf-extra { display: block; }
+.skein-sprout[data-g="bud"] .sp-bloom { display: none; }
+.skein-sprout[data-g="bud"] .sp-leaf-l { transform: scale(1.1); }
+.skein-sprout[data-g="bud"] .sp-leaf-r { transform: scale(1.1); }
+.skein-sprout[data-g="bud"] .sp-sprig { transform: scale(1.12); transform-origin: 100px 95px; }
+.skein-sprout[data-g="bud"] .sp-leaf-extra { display: block; }
+.skein-sprout[data-g="bud"] .sp-bud { display: block; }
+.skein-sprout[data-g="bloom"] .sp-bud { display: none; }
+.skein-sprout[data-g="bloom"] .sp-leaf-l { transform: scale(1.15); }
+.skein-sprout[data-g="bloom"] .sp-leaf-r { transform: scale(1.15); }
+.skein-sprout[data-g="bloom"] .sp-sprig { display: none; }
+.skein-sprout[data-g="bloom"] .sp-leaf-extra { display: block; }
+.skein-sprout[data-g="bloom"] .sp-bloom { display: block; animation: 3.6s ease-in-out 0s infinite normal none running skein-bloom-sway; transform-origin: 100px 80px; }
+.skein-sprout .sp-leaf-extra, .skein-sprout .sp-bud, .skein-sprout .sp-bloom { display: none; }
+@keyframes skein-bloom-sway { 
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}</style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="logo">
-      <span class="logo-mark">H</span>
+      <div class="skein-sprout" data-s="happy" data-g="sprout" style="width:28px;height:34px"><svg viewBox="-20 -20 240 320" width="28" height="34" xmlns="http://www.w3.org/2000/svg" style="overflow: visible; display: block;"><ellipse class="sp-shadow" cx="100" cy="290" rx="75" ry="8"></ellipse><g><path class="pot ink" stroke-width="3" d="M 32 220 L 168 220 L 158 286 Q 155 294 148 294 L 52 294 Q 45 294 42 286 Z"></path><path class="pot-shade" d="M 150 226 L 143 286 Q 141 290 137 290 L 156 290 Q 159 288 160 286 L 168 226 Z"></path><ellipse class="pot-rim ink" stroke-width="3" cx="100" cy="220" rx="72" ry="10"></ellipse><ellipse class="soil" cx="100" cy="220" rx="66" ry="6"></ellipse><circle class="soil-speck" cx="72" cy="221" r="2"></circle><circle class="soil-speck" cx="120" cy="223" r="1.6"></circle><circle class="soil-speck" cx="140" cy="220" r="1.3"></circle><circle class="soil-speck" cx="90" cy="222" r="1.5"></circle><path class="ink" fill="none" stroke-width="2.2" stroke-dasharray="5 6" d="M 50 248 L 150 248"></path></g><g class="sp-body"><path class="stem ink sp-stem" stroke-width="3" d="M 96 218 Q 94 180 96 110 L 104 110 Q 106 180 104 218 Z"></path><g class="sp-leaf-l" style="transform-origin: 96px 185px;"><path class="ink" fill="var(--leaf-dark)" stroke-width="2.5" d="M 94 184 Q 92 188 94 192 Q 98 190 98 186 Z"></path><path class="leaf ink" stroke-width="3" d="M 96 186 Q 78 176 54 168 Q 34 170 28 148 Q 38 132 62 140 Q 86 154 96 178 Q 98 184 96 186 Z"></path><path class="leaf-vein" d="M 96 184 Q 72 166 36 148"></path><path class="leaf-vein" stroke-width="1" opacity="0.5" d="M 72 164 L 62 156"></path><path class="leaf-vein" stroke-width="1" opacity="0.5" d="M 58 158 L 50 152"></path></g><g class="sp-leaf-r" style="transform-origin: 104px 185px;"><path class="ink" fill="var(--leaf-dark)" stroke-width="2.5" d="M 106 184 Q 108 188 106 192 Q 102 190 102 186 Z"></path><path class="leaf ink" stroke-width="3" d="M 104 186 Q 122 176 146 168 Q 166 170 172 148 Q 162 132 138 140 Q 114 154 104 178 Q 102 184 104 186 Z"></path><path class="leaf-vein" d="M 104 184 Q 128 166 164 148"></path><path class="leaf-vein" stroke-width="1" opacity="0.5" d="M 128 164 L 138 156"></path><path class="leaf-vein" stroke-width="1" opacity="0.5" d="M 142 158 L 150 152"></path></g><g class="sp-leaf-extra"><path class="leaf ink" stroke-width="2.5" d="M 76 122 Q 60 118 48 108 Q 42 98 50 92 Q 62 96 74 110 Q 78 118 76 122 Z"></path><path class="leaf-vein" d="M 76 120 Q 64 114 50 102"></path><path class="leaf ink" stroke-width="2.5" d="M 124 122 Q 140 118 152 108 Q 158 98 150 92 Q 138 96 126 110 Q 122 118 124 122 Z"></path><path class="leaf-vein" d="M 124 120 Q 136 114 150 102"></path></g><g class="sp-bulb-g"><ellipse class="bulb ink" stroke-width="3.5" cx="100" cy="150" rx="58" ry="64"></ellipse><path class="bulb-shade" d="M 150 135 Q 156 165 138 200 Q 122 210 108 210 Q 140 204 148 180 Q 152 160 148 138 Z"></path><ellipse fill="#C2DEB9" opacity="0.55" cx="78" cy="118" rx="16" ry="22"></ellipse></g><g class="sp-bud"><path class="stem ink" stroke-width="2.5" d="M 97 95 Q 96 78 98 58 L 103 58 Q 104 78 103 95 Z"></path><ellipse cx="100" cy="50" rx="10" ry="14" fill="#E9A9A0" stroke="var(--ink)" stroke-width="2.5"></ellipse><path fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" d="M 94 52 Q 100 48 106 52 M 96 44 Q 100 40 104 44"></path><path fill="var(--leaf-dark)" stroke="var(--ink)" stroke-width="2" d="M 92 58 Q 96 64 100 62 Q 104 64 108 58 Q 104 56 100 57 Q 96 56 92 58 Z"></path></g><g class="sp-bloom"><path class="stem ink" stroke-width="2.5" d="M 97 95 Q 96 78 98 58 L 103 58 Q 104 78 103 95 Z"></path><ellipse cx="100" cy="40" rx="9" ry="14" fill="#F2B5AB" stroke="var(--ink)" stroke-width="2" transform="rotate(-36 100 52)"></ellipse><ellipse cx="100" cy="40" rx="9" ry="14" fill="#F2B5AB" stroke="var(--ink)" stroke-width="2" transform="rotate(36 100 52)"></ellipse><ellipse cx="100" cy="40" rx="9" ry="14" fill="#F2B5AB" stroke="var(--ink)" stroke-width="2" transform="rotate(-72 100 52)"></ellipse><ellipse cx="100" cy="40" rx="9" ry="14" fill="#F2B5AB" stroke="var(--ink)" stroke-width="2" transform="rotate(72 100 52)"></ellipse><ellipse cx="100" cy="40" rx="9" ry="14" fill="#F2B5AB" stroke="var(--ink)" stroke-width="2"></ellipse><circle cx="100" cy="52" r="8" fill="#E9C89C" stroke="var(--ink)" stroke-width="2.2"></circle><circle cx="100" cy="52" r="3" fill="#D97757"></circle></g><g class="sp-sprig" style="transform-origin: 100px 95px;"><path class="stem ink" stroke-width="2.5" d="M 97 95 Q 96 78 98 58 L 103 58 Q 104 78 103 95 Z"></path><path class="sprig-leaf ink" stroke-width="2.5" d="M 102 62 Q 116 54 118 40 Q 114 34 106 40 Q 100 50 101 60 Q 102 62 102 62 Z"></path><path class="leaf-vein" stroke-width="1.2" d="M 104 58 Q 110 52 114 44"></path></g><g class="sp-face"><ellipse class="blush" cx="72" cy="168" rx="10" ry="5"></ellipse><ellipse class="blush" cx="128" cy="168" rx="10" ry="5"></ellipse><g class="sp-eyes"><g class="eyes-open"><circle class="eye sp-eye" cx="85" cy="150" r="6"></circle><circle class="eye sp-eye" cx="115" cy="150" r="6"></circle><circle class="pupil" cx="87" cy="148" r="2"></circle><circle class="pupil" cx="117" cy="148" r="2"></circle></g><g class="eyes-happy"><path class="mouth" stroke-width="3" d="M 79 152 Q 85 144 91 152"></path><path class="mouth" stroke-width="3" d="M 109 152 Q 115 144 121 152"></path></g><g class="eyes-sleep"><path class="mouth" stroke-width="3" d="M 79 151 Q 85 154 91 151"></path><path class="mouth" stroke-width="3" d="M 109 151 Q 115 154 121 151"></path></g></g><g class="mgrp m-default"><path class="mouth" d="M 90 174 Q 100 184 110 174"></path></g><g class="mgrp m-listen"><ellipse cx="100" cy="177" rx="5" ry="3.5" fill="var(--ink)" stroke="var(--ink)" stroke-width="2"></ellipse><ellipse cx="100" cy="178" rx="3" ry="1.6" fill="#8A5A5A"></ellipse></g><g class="mgrp m-think"><path class="mouth" stroke-width="3" stroke-linecap="round" d="M 94 178 Q 100 176 106 178"></path></g><g class="mgrp m-happy"><path fill="var(--ink)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round" d="M 88 174 Q 90 173 93 173 L 107 173 Q 110 173 112 174 Q 111 182 106 186 Q 100 189 94 186 Q 89 182 88 174 Z"></path><path fill="#E89488" stroke="none" d="M 92 180 Q 100 187 108 180 Q 100 184 92 180 Z"></path></g><g class="mgrp m-sleep"><ellipse cx="100" cy="178" rx="4" ry="2.4" fill="var(--ink)" stroke="none"></ellipse></g><g class="mgrp m-confused"><path class="mouth" fill="none" stroke-width="2.6" stroke-linecap="round" d="M 88 178 Q 92 172 96 178 Q 100 184 104 178 Q 108 172 112 178"></path></g><g class="mgrp m-party"><path fill="var(--ink)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round" d="M 86 173 Q 89 171 93 172 L 107 172 Q 111 171 114 173 Q 113 184 107 188 Q 100 191 93 188 Q 87 184 86 173 Z"></path><path fill="#E89488" stroke="var(--ink)" stroke-width="1.2" stroke-linejoin="round" d="M 90 180 Q 100 192 112 182 Q 110 186 106 186 Q 100 190 94 186 Q 90 184 90 180 Z"></path><path fill="none" stroke="#B8625A" stroke-width="1" opacity="0.6" d="M 96 186 Q 100 190 106 186"></path></g></g></g></svg></div>
       <span>Heed</span>
     </a>
     <a href="/" class="nav-back">← Back to home</a>
@@ -264,14 +241,14 @@
 <main>
   <span class="eyebrow">Privacy policy</span>
   <h1>Your data <em>stays with you.</em></h1>
-  <p class="meta">Effective: 3 May 2026 · Last updated: 3 May 2026</p>
+  <p class="meta">Effective: 3 May 2026 · Last updated: 4 November 2026</p>
 
   <div class="tldr">
     <h2>The <em>short version.</em></h2>
     <ul>
       <li><strong>Heed runs entirely on your device.</strong> Your voice, transcripts, items, and search history never leave your phone.</li>
       <li><strong>We don't have a server for your data.</strong> No accounts, no cloud sync, no telemetry, no analytics, no ads, no tracking.</li>
-      <li><strong>The only network call</strong> is a one-time download of the AI model files (~2.7 GB total) from HuggingFace, with a Cloudflare R2 mirror as a fallback. After that, you can use the app fully offline.</li>
+      <li><strong>No network at all.</strong> The speech, task and search models ship inside the app, and Heed does not have Android's internet permission, so it cannot go online. (Earlier versions downloaded their models once on first launch; see <a href="#network">section 5</a>.)</li>
     </ul>
   </div>
 
@@ -281,41 +258,32 @@
 
   <h2>2. The short version, in plain English</h2>
   <p>You speak. Heed transcribes you, categorises what you said, and saves it as items inside the app. Every step of that pipeline runs on your device. We don't have a backend to send your data to, and we haven't built one — that absence is the whole product.</p>
-  <p>The single exception is downloading the AI model files the first time you set up the app. That download contacts HuggingFace and (if HuggingFace is unavailable in your region) a Cloudflare R2 mirror we operate. We explain that call in detail in <a href="#network">section 5</a>.</p>
+  <p>There are no exceptions: the AI models are part of the app you install from Google Play, so Heed never needs to download anything. <a href="#network">Section 5</a> explains how earlier versions differed.</p>
 
   <h2>3. What Heed handles on your device</h2>
   <p>While you use Heed, the following data is created and stored locally on your phone:</p>
   <ul>
-    <li><strong>Voice recordings</strong> (WAV files in app-private storage). Created when you tap the mic. Deleted automatically once transcription completes, or kept in History if you've enabled that — your choice, in Settings.</li>
+    <li><strong>Voice recordings</strong> (WAV files in app-private storage). Created when you tap the mic and kept with the note, so you can play them back in History. Deleted when you delete the note or clear your data.</li>
     <li><strong>Transcripts</strong> of what you said.</li>
-    <li><strong>Items</strong> Heed extracted from your speech: tasks, shopping items, ideas, reminders, journal entries, and so on, including the category Heed assigned, any reminder time you set, and any tags it attached.</li>
-    <li><strong>Search queries</strong> you type or speak in Heed's search bar, and the synthesised answers Heed produces.</li>
-    <li><strong>Settings</strong> you choose: theme, time format, default categories, on-device speech engine, daily-digest preferences.</li>
+    <li><strong>Items</strong> Heed extracted from your speech: tasks, shopping items, ideas, reminders, journal entries, and so on, including the category Heed assigned and any reminder time.</li>
+    <li><strong>Search queries</strong> you type or speak in Heed's search bar.</li>
+    <li><strong>A search index</strong> of your notes: their text, plus numbers computed from it by the on-device search model, so search can find a note even when you use different words.</li>
+    <li><strong>Settings</strong> you choose: theme, time format, categories, reminder and daily-digest preferences.</li>
     <li><strong>Diagnostic logs</strong> Heed writes locally to help you (or our support, if you choose to share) understand performance and crash behaviour. These never auto-upload anywhere.</li>
   </ul>
   <p>All of the above lives in your app's private storage area. Other apps cannot read it, and Heed does not transmit it.</p>
 
   <h2>4. What <em>never</em> leaves your device</h2>
   <p>To be unambiguous: Heed does not send your voice, transcripts, items, search history, or any other content you create with the app to any server, ours or anybody else's. There is no cloud sync. There are no analytics events. There is no crash-reporting SDK uploading anything. There are no advertising identifiers being read or sent.</p>
-  <p>You can verify this yourself in Android Settings → Apps → Heed → Mobile data. After the one-time model download (section 5) the number stays at zero, even after weeks of regular use.</p>
+  <p>You can verify this yourself: Heed does not request the internet permission, so Android blocks it from any network access. Android Settings → Apps → Heed shows no network permission, and its mobile-data use stays at zero.</p>
 
-  <h2 id="network">5. The one network call: the model download</h2>
-  <p>Heed needs an AI language model and a speech-recognition model to function. These are large files we do not embed in the app itself, because that would bloat the install size and prevent updates. The first time you set up the app — and only then — Heed downloads them:</p>
-  <ul>
-    <li><strong>Gemma 4 E2B</strong> language model (~2.4 GB) from <a href="https://huggingface.co/litert-community" rel="noopener" target="_blank">huggingface.co/litert-community</a>.</li>
-    <li><strong>Whisper Small</strong> speech-recognition model (~280 MB across three files) from <a href="https://huggingface.co/csukuangfj" rel="noopener" target="_blank">huggingface.co/csukuangfj</a>.</li>
-    <li>If HuggingFace is unavailable in your region or temporarily down, Heed falls back to a Cloudflare R2 mirror we host at <code>pub-33cceff19bc44aa1a7a000f377d71685.r2.dev</code> with byte-identical copies. The mirror is verified by SHA-256 hash before use.</li>
-  </ul>
-  <p>The HTTP request to HuggingFace and (if used) Cloudflare consists of standard download metadata: your IP address (so they can return a response) and a generic User-Agent. Neither party is told who you are, what device you're on beyond that, or what you're going to do with the model.</p>
-  <p>We do not see this request at all. HuggingFace and Cloudflare do see it, in the same way they see any download, and you are subject to their respective privacy policies for that one transaction:</p>
-  <ul>
-    <li><a href="https://huggingface.co/privacy" rel="noopener" target="_blank">HuggingFace Privacy Policy</a></li>
-    <li><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Cloudflare Privacy Policy</a></li>
-  </ul>
-  <p>Once the download completes and the SHA-256 of each file is verified, Heed never contacts these endpoints again unless you explicitly delete the model and reinstall it. The app works fully offline from that point on. You can put your phone in airplane mode and use Heed normally.</p>
+  <h2 id="network">5. Network access: none</h2>
+  <p>Heed needs three AI models: a speech-recognition model (IBM Granite Speech), a task model (a small Qwen3 model fine-tuned for Heed) and a search model (Google's EmbeddingGemma). All three are included in the app package you download from Google Play. Heed does not download anything after installation, and because it does not hold the internet permission, it cannot contact any server, ours or anyone else's.</p>
+  <h3>Earlier versions</h3>
+  <p>Versions of Heed released before the models were built in (with Gemma and Whisper) held the internet permission for one purpose: downloading their models once, on first launch, from HuggingFace, with a Cloudflare R2 mirror we operate as a fallback. That request carried only standard download metadata (your IP address and a generic User-Agent), each file was checked by SHA-256 hash before use, and no data you created was ever sent. HuggingFace and Cloudflare are subject to their own policies for that one download: <a href="https://huggingface.co/privacy" rel="noopener" target="_blank">HuggingFace Privacy Policy</a>, <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Cloudflare Privacy Policy</a>. Updating to the current version removes that permission.</p>
 
   <h2>6. Permissions Heed asks for</h2>
-  <p>The Android system requires apps to declare the permissions they use. Here is the complete list, with why each one is needed:</p>
+  <p>The Android system requires apps to declare the permissions they use. Here is the complete list, with why each one is needed. Note what is <em>not</em> on it: <code>INTERNET</code>.</p>
 
   <table class="perm-table">
     <thead>
@@ -327,15 +295,11 @@
         <td class="why">Recording your voice when you tap the mic. The audio is processed on-device by the speech-recognition model and never sent anywhere.</td>
       </tr>
       <tr>
-        <td><code>INTERNET</code></td>
-        <td class="why">Used only for the one-time model download described in section 5. Once the model is on your device, no further network calls are made.</td>
-      </tr>
-      <tr>
         <td><code>POST_NOTIFICATIONS</code></td>
         <td class="why">Showing reminder notifications you've explicitly set, and a foreground-service notification while voice processing is happening.</td>
       </tr>
       <tr>
-        <td><code>SCHEDULE_EXACT_ALARM</code> · <code>USE_EXACT_ALARM</code></td>
+        <td><code>SCHEDULE_EXACT_ALARM</code></td>
         <td class="why">Firing reminders at the precise time you asked for ("remind me at 3 pm"), instead of within a fuzzy window the OS chooses.</td>
       </tr>
       <tr>
@@ -347,10 +311,6 @@
         <td class="why">Running on-device AI inference (transcription and categorisation) while the app is in the background, with a status notification so you can see what's happening. The "special use" subtype is declared as <code>on_device_ai_processing</code>.</td>
       </tr>
       <tr>
-        <td><code>FOREGROUND_SERVICE_DATA_SYNC</code></td>
-        <td class="why">Used by the model-download flow to keep downloading even if you switch apps, with a progress notification.</td>
-      </tr>
-      <tr>
         <td><code>WAKE_LOCK</code></td>
         <td class="why">Keeping the CPU awake during a voice-processing run so it doesn't slow to a crawl when the screen turns off (e.g., if you record from the lock screen). Released the moment processing finishes.</td>
       </tr>
@@ -360,7 +320,7 @@
       </tr>
       <tr>
         <td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
-        <td class="why">Optional. On phones with aggressive battery management (Xiaomi, Oppo, Vivo, OnePlus, some Samsung configurations), the OS can throttle Heed so much that lock-screen voice notes take minutes to finish. Heed asks for this exemption only if you opt in via Settings → "Allow background processing." You can revoke it any time.</td>
+        <td class="why">Optional. On phones with aggressive battery management (Xiaomi, Oppo, Vivo, OnePlus, some Samsung configurations), the OS can throttle Heed so much that lock-screen voice notes take minutes to finish. Heed asks for this exemption only if you choose to allow it in Settings. You can revoke it any time.</td>
       </tr>
     </tbody>
   </table>
@@ -372,19 +332,19 @@
   <h2>7. Storage and deletion</h2>
   <p>All your Heed data lives in your phone's app-private storage area, which is sandboxed by the operating system. Other apps cannot access it without root. Heed itself does not encrypt the database beyond what Android's full-device encryption already provides — so your phone's lock screen is what's keeping your data safe at rest.</p>
   <h3>Exporting your data</h3>
-  <p>Settings → Data → Export as JSON gives you a complete copy of your items, recordings metadata, transcripts, and categories in a machine-readable file. You pick where to save it.</p>
+  <p>Settings → Export backup saves a backup file of your Heed data (items, categories, voice-note transcripts and search history) wherever you choose. Settings → Restore from backup reads it back, for example on a new phone. The file never leaves your control.</p>
   <h3>Deleting your data</h3>
   <p>You have several ways to remove data:</p>
   <ul>
     <li><strong>Delete a single item</strong> — long-press in the category screen, or open it and tap delete.</li>
     <li><strong>Delete a recording</strong> — in History, swipe or open the recording detail.</li>
-    <li><strong>Wipe everything</strong> — Android Settings → Apps → Heed → Storage → Clear data. Removes the database, all recordings, all settings, and the downloaded model. The app returns to a fresh-install state.</li>
+    <li><strong>Clear all data</strong> — in Heed's Settings. Deletes all tasks and reminders, voice notes (transcripts and audio), categories you added, search history and logs. Your settings are kept.</li>
+    <li><strong>Wipe everything</strong> — Android Settings → Apps → Heed → Storage → Clear data. Removes the database, all recordings and all settings. The app returns to a fresh-install state.</li>
     <li><strong>Uninstall the app</strong> — removes everything Heed ever wrote to your device. Because nothing was ever uploaded, there is no copy elsewhere.</li>
   </ul>
 
   <h2>8. Security</h2>
-  <p>Heed is open about how it works. The core privacy claim — "nothing leaves the device except the model download" — is structurally enforced: the app contains no analytics SDK, no crash-reporter SDK, no advertising library, no Firebase, no Google Sign-In, and no remote API client. You can verify this with a network monitor (e.g., your router logs, or an on-device packet capture tool) on a real device.</p>
-  <p>The one-time model download is verified by SHA-256 hash before the file is loaded — a corrupted or tampered file is detected and rejected.</p>
+  <p>Heed is open about how it works. The core privacy claim — "nothing leaves the device" — is structurally enforced: the app does not hold the internet permission, and it contains no analytics SDK, no crash-reporter SDK, no advertising library, no Firebase, no Google Sign-In, and no remote API client. You can verify this with a network monitor (e.g., your router logs, or an on-device packet capture tool) on a real device.</p>
   <p>Because Heed has no servers, there is no server-side data breach scenario for your content. The remaining attack surface is your physical device; we recommend the usual precautions (a strong lock screen, OS updates, full-disk encryption — which is standard on modern Android).</p>
 
   <h2>9. Children's privacy</h2>
@@ -400,15 +360,14 @@
   <p>The structural fact that Heed does not collect or transmit your personal data means most regional privacy regulations (Canada's PIPEDA, Brazil's LGPD, Australia's Privacy Act, India's DPDP Act, etc.) impose no additional obligations on us. If you have a specific question, write to us.</p>
 
   <h2>11. Changes to this policy</h2>
-  <p>We will update this policy if we change anything material — for example, adding iOS, adding an opt-in cloud-sync feature (which we have no plans to do), or changing the model-download mirrors. The "Last updated" date at the top of this page reflects the most recent change. Material changes will also be surfaced in the app's release notes.</p>
+  <p>We will update this policy if we change anything material — for example, adding iOS, adding an opt-in cloud-sync feature (which we have no plans to do), or any change to network access. The "Last updated" date at the top of this page reflects the most recent change. Material changes will also be surfaced in the app's release notes.</p>
   <p>We will not retroactively expand what data is collected without explicit opt-in from you. If a future feature ever requires sending something off-device, that feature will be disabled by default and clearly described before you enable it.</p>
 
   <h2>12. Contact</h2>
-  <p>For privacy questions, data requests, or anything else covered by this policy, please use the developer contact email shown on the Heed listing in the Google Play Store. The Play Store displays a developer email and website link in the listing's "Developer contact" section by Google's policy.</p>
-  <p>If Heed isn't yet listed on the Google Play Store at the time you're reading this, the page will be updated with a direct contact channel before public release.</p>
+  <p>For privacy questions, data requests, or anything else covered by this policy, please use the developer contact email shown in the "App support" section of the <a href="https://play.google.com/store/apps/details?id=com.heedapp.android&amp;hl=en" rel="noopener" target="_blank">Heed listing on Google Play</a>.</p>
 
   <hr>
-  <p style="font-size: 14px; color: var(--ink-3);">This page is plain HTML, has no third-party scripts, sets no cookies, and uses no tracking pixels. The only third-party request it makes is fetching the Geist and Instrument Serif typefaces from Google Fonts on first load (cached by your browser thereafter). If you would prefer the page never contact Google Fonts, your browser's "block third-party requests" or an extension like uBlock Origin will substitute system fonts without affecting readability.</p>
+  <p style="font-size: 14px; color: var(--ink-3);">This page is plain HTML, has no third-party scripts, sets no cookies, and uses no tracking pixels. The only third-party request it makes is fetching the Inter and JetBrains Mono typefaces from Google Fonts on first load (cached by your browser thereafter). If you would prefer the page never contact Google Fonts, your browser's "block third-party requests" or an extension like uBlock Origin will substitute system fonts without affecting readability.</p>
 </main>
 
 <footer>

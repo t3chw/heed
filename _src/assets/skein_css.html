@@ -1,0 +1,190 @@
+@keyframes skein-breathe { 
+  0%, 100% { transform: translateY(0px) scale(1, 1); }
+  50% { transform: translateY(-1.5px) scale(1.015, 0.985); }
+}
+@keyframes skein-blink { 
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%, 97% { transform: scaleY(0.1); }
+}
+@keyframes skein-bob { 
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-6px) rotate(1.5deg); }
+}
+@keyframes skein-wobble { 
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+@keyframes pulse-ring { 
+  0% { transform: scale(1); opacity: 0.55; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes skein-spin { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes wave { 
+  0%, 100% { transform: scaleY(0.25); }
+  50% { transform: scaleY(1); }
+}
+@keyframes float-dot { 
+  0%, 100% { transform: translateY(0px); opacity: 0.6; }
+  50% { transform: translateY(-8px); opacity: 1; }
+}
+.eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--ink-3); display: inline-block; }
+@keyframes float-bub { 
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+  50% { transform: translateY(-8px) rotate(calc(var(--rot, 0deg) + 1deg)); }
+}
+@keyframes mh-wave { 
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+.skein-sprout { --leaf: #9FC28F; --leaf-dark: #6F9764; --leaf-light: #B9D4AC; --bulb: #A8CF97; --bulb-shade: #7FA76F; --pot: #C97A55; --pot-shade: #A65F3E; --soil: #3A2618; --ink: #2A1F18; --blush: #E9A9A0; --terra: #D97757; --sun: #E9C89C; }
+.skein-sprout .ink { stroke: var(--ink); stroke-linecap: round; stroke-linejoin: round; }
+.skein-sprout .pot { fill: var(--pot); }
+.skein-sprout .pot-shade { fill: var(--pot-shade); opacity: 0.4; }
+.skein-sprout .pot-rim { fill: var(--pot); }
+.skein-sprout .soil { fill: var(--soil); }
+.skein-sprout .soil-speck { fill: rgb(42, 24, 16); }
+.skein-sprout .bulb { fill: var(--bulb); }
+.skein-sprout .bulb-shade { fill: var(--bulb-shade); opacity: 0.6; }
+.skein-sprout .sprig { fill: var(--leaf-dark); }
+.skein-sprout .stem { fill: var(--leaf-dark); stroke: var(--ink); }
+.skein-sprout .sprig-leaf { fill: var(--leaf-light); stroke: var(--ink); stroke-linejoin: round; }
+.skein-sprout .leaf { fill: var(--leaf); }
+.skein-sprout .leaf-vein { stroke: var(--leaf-dark); stroke-width: 1.5; fill: none; stroke-linecap: round; }
+.skein-sprout .eye { fill: var(--ink); }
+.skein-sprout .pupil { fill: rgb(255, 249, 240); }
+.skein-sprout .mouth { fill: none; stroke: var(--ink); stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.skein-sprout .blush { fill: var(--blush); opacity: 0.6; }
+.skein-sprout .sp-shadow { fill: rgba(0, 0, 0, 0.15); }
+.skein-sprout .mgrp { display: none; }
+.skein-sprout .m-default { display: block; }
+.skein-sprout .eyes-happy, .skein-sprout .eyes-sleep, .skein-sprout .eyes-stars { display: none; }
+@keyframes skein-breathe { 
+  0%, 100% { transform: translateY(0px) scale(1, 1); }
+  50% { transform: translateY(-3px) scale(1.025, 1.03); }
+}
+@keyframes skein-calm-lift { 
+  0%, 100% { transform: translateY(0px) scale(1, 1) rotate(-1.5deg); }
+  50% { transform: translateY(-4px) scale(1.03, 1.04) rotate(1.5deg); }
+}
+@keyframes skein-listen-lean { 
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-1px) rotate(2deg); }
+}
+@keyframes skein-tilt { 
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-6deg); }
+}
+@keyframes skein-tilt-alt { 
+  0% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
+  100% { transform: rotate(-7deg); }
+}
+@keyframes skein-party-sway { 
+  0%, 100% { transform: translateY(0px) rotate(-3deg); }
+  50% { transform: translateY(-3px) rotate(3deg); }
+}
+@keyframes skein-sprig-wiggle { 
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes skein-leaf-l { 
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-5deg); }
+}
+@keyframes skein-leaf-r { 
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+@keyframes skein-blink { 
+  0%, 92%, 100% { transform: scaleY(1); }
+  94%, 98% { transform: scaleY(0.1); }
+}
+@keyframes skein-eye-look-up { 
+  0%, 30%, 100% { transform: translateY(0px); }
+  50%, 80% { transform: translateY(-2px); }
+}
+@keyframes skein-eye-dart { 
+  0%, 100% { transform: translateX(0px); }
+  25% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+}
+@keyframes skein-shadow { 
+  0%, 100% { transform: scaleX(1); opacity: 0.15; }
+  50% { transform: scaleX(0.9); opacity: 0.1; }
+}
+.skein-sprout[data-s="idle"] .sp-body { animation: 3.6s ease-in-out 0s infinite normal none running skein-breathe; transform-origin: center bottom; }
+.skein-sprout[data-s="idle"] .sp-sprig { animation: 3.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="idle"] .sp-leaf-l { animation: 4.4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="idle"] .sp-leaf-r { animation: 4.6s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="idle"] .sp-eye { animation: 5.5s ease 0s infinite normal none running skein-blink; transform-origin: center center; }
+.skein-sprout[data-s="listen"] .sp-body { animation: 2.4s ease-in-out 0s infinite normal none running skein-listen-lean; transform-origin: center bottom; }
+.skein-sprout[data-s="listen"] .sp-sprig { animation: 3.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="listen"] .sp-leaf-l { animation: 4.4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="listen"] .sp-leaf-r { animation: 4.6s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="listen"] .sp-eye { animation: 6s ease 0s infinite normal none running skein-blink; transform-origin: center center; }
+.skein-sprout[data-s="listen"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="listen"] .mgrp.m-listen { display: block; }
+.skein-sprout[data-s="think"] .sp-body { animation: 3.2s ease-in-out 0s infinite normal none running skein-tilt; transform-origin: center bottom; }
+.skein-sprout[data-s="think"] .sp-sprig { animation: 6s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="think"] .sp-eyes { animation: 3.2s ease-in-out 0s infinite normal none running skein-eye-look-up; }
+.skein-sprout[data-s="think"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="think"] .mgrp.m-think { display: block; }
+.skein-sprout[data-s="happy"] .sp-body { animation: 3.2s ease-in-out 0s infinite normal none running skein-calm-lift; transform-origin: center bottom; }
+.skein-sprout[data-s="happy"] .sp-sprig { animation: 3.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="happy"] .sp-leaf-l { animation: 4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="happy"] .sp-leaf-r { animation: 4.2s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="happy"] .eyes-open { display: none; }
+.skein-sprout[data-s="happy"] .eyes-happy { display: block; }
+.skein-sprout[data-s="happy"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="happy"] .mgrp.m-happy { display: block; }
+.skein-sprout[data-s="sleep"] .sp-body { animation: 5s ease-in-out 0s infinite normal none running skein-breathe; transform-origin: center bottom; }
+.skein-sprout[data-s="sleep"] .sp-sprig { animation: 8s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="sleep"] .eyes-open { display: none; }
+.skein-sprout[data-s="sleep"] .eyes-sleep { display: block; }
+.skein-sprout[data-s="sleep"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="sleep"] .mgrp.m-sleep { display: block; }
+.skein-sprout[data-s="confused"] .sp-body { animation: 1.4s ease-in-out 0s infinite normal none running skein-tilt-alt; transform-origin: center bottom; }
+.skein-sprout[data-s="confused"] .sp-sprig { animation: 1.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="confused"] .sp-eyes { animation: 3s ease-in-out 0s infinite normal none running skein-eye-dart; }
+.skein-sprout[data-s="confused"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="confused"] .mgrp.m-confused { display: block; }
+.skein-sprout[data-s="party"] .sp-body { animation: 2.2s ease-in-out 0s infinite normal none running skein-party-sway; transform-origin: center bottom; }
+.skein-sprout[data-s="party"] .sp-sprig { animation: 2.2s ease-in-out 0s infinite normal none running skein-sprig-wiggle; transform-origin: center bottom; }
+.skein-sprout[data-s="party"] .sp-leaf-l { animation: 2.4s ease-in-out 0s infinite normal none running skein-leaf-l; transform-origin: 96px 185px; }
+.skein-sprout[data-s="party"] .sp-leaf-r { animation: 2.4s ease-in-out 0s infinite reverse none running skein-leaf-r; transform-origin: 104px 185px; }
+.skein-sprout[data-s="party"] .eyes-open { display: none; }
+.skein-sprout[data-s="party"] .eyes-happy { display: block; }
+.skein-sprout[data-s="party"] .mgrp.m-default { display: none; }
+.skein-sprout[data-s="party"] .mgrp.m-party { display: block; }
+.skein-sprout .sp-leaf-l, .skein-sprout .sp-leaf-r, .skein-sprout .sp-sprig, .skein-sprout .sp-bulb-g, .skein-sprout .sp-bud, .skein-sprout .sp-bloom, .skein-sprout .sp-leaf-extra, .skein-sprout .sp-stem { transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 400ms; }
+.skein-sprout[data-g="seed"] .sp-leaf-l, .skein-sprout[data-g="seed"] .sp-leaf-r, .skein-sprout[data-g="seed"] .sp-sprig, .skein-sprout[data-g="seed"] .sp-bud, .skein-sprout[data-g="seed"] .sp-bloom { display: none; }
+.skein-sprout[data-g="seed"] .sp-stem { transform: scaleY(0.25); transform-origin: 100px 218px; }
+.skein-sprout[data-g="seed"] .sp-bulb-g { transform: translate(0px, 48px) scale(0.55); transform-origin: 100px 150px; }
+.skein-sprout[data-g="sprout"] .sp-bud, .skein-sprout[data-g="sprout"] .sp-bloom { display: none; }
+.skein-sprout[data-g="sprout"] .sp-leaf-l, .skein-sprout[data-g="sprout"] .sp-leaf-r { transform: scale(0.85); }
+.skein-sprout[data-g="lush"] .sp-bud, .skein-sprout[data-g="lush"] .sp-bloom { display: none; }
+.skein-sprout[data-g="lush"] .sp-leaf-l { transform: scale(1.08); }
+.skein-sprout[data-g="lush"] .sp-leaf-r { transform: scale(1.08); }
+.skein-sprout[data-g="lush"] .sp-sprig { transform: scale(1.1); transform-origin: 100px 95px; }
+.skein-sprout[data-g="lush"] .sp-leaf-extra { display: block; }
+.skein-sprout[data-g="bud"] .sp-bloom { display: none; }
+.skein-sprout[data-g="bud"] .sp-leaf-l { transform: scale(1.1); }
+.skein-sprout[data-g="bud"] .sp-leaf-r { transform: scale(1.1); }
+.skein-sprout[data-g="bud"] .sp-sprig { transform: scale(1.12); transform-origin: 100px 95px; }
+.skein-sprout[data-g="bud"] .sp-leaf-extra { display: block; }
+.skein-sprout[data-g="bud"] .sp-bud { display: block; }
+.skein-sprout[data-g="bloom"] .sp-bud { display: none; }
+.skein-sprout[data-g="bloom"] .sp-leaf-l { transform: scale(1.15); }
+.skein-sprout[data-g="bloom"] .sp-leaf-r { transform: scale(1.15); }
+.skein-sprout[data-g="bloom"] .sp-sprig { display: none; }
+.skein-sprout[data-g="bloom"] .sp-leaf-extra { display: block; }
+.skein-sprout[data-g="bloom"] .sp-bloom { display: block; animation: 3.6s ease-in-out 0s infinite normal none running skein-bloom-sway; transform-origin: 100px 80px; }
+.skein-sprout .sp-leaf-extra, .skein-sprout .sp-bud, .skein-sprout .sp-bloom { display: none; }
+@keyframes skein-bloom-sway { 
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
