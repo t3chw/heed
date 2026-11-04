@@ -12,6 +12,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAY = "https://play.google.com/store/apps/details?id=com.heedapp.android&amp;hl=en"
+GITHUB = "https://github.com/t3chw/Heed_app"
+HF = "https://huggingface.co/collections/mohitkrconnect/heed-on-device-voice-notes-to-tasks-6aeb1f235223a590f0929743"
+HF_MODEL = "https://huggingface.co/mohitkrconnect/heed-tasks-qwen3-0.6b"
+HF_DATA = "https://huggingface.co/datasets/mohitkrconnect/heed-voice-notes-to-tasks"
+HF_STUDY = "https://huggingface.co/spaces/mohitkrconnect/heed-study"
 
 # ---------------------------------------------------------------- numbers
 EVAL_SET = "617 sealed test notes never used for training or tuning, 126 of them real; Heed ran on a real phone"
@@ -315,11 +320,14 @@ details.numbers{margin-top:14px;font-size:14px}details.numbers summary{cursor:po
 .faq summary{cursor:pointer;font-weight:650;font-size:17px;color:var(--ink);list-style:none}.faq summary::-webkit-details-marker{display:none}
 .faq summary::before{content:"▸";display:inline-block;width:20px;color:var(--ink-3);transition:transform .15s}.faq details[open] summary::before{transform:rotate(90deg)}
 .faq p{margin:8px 0 0 20px;color:var(--ink-3)}
+.oss{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+a.card{display:block;text-decoration:none;color:inherit}a.card:hover{border-color:#C7C6C2;background:var(--soft)}
+.more{margin:20px 0 0}
 .cta{text-align:center;position:relative}.cta .lede{margin:16px auto 0}.cta .actions{justify-content:center}.cta .pal{display:flex;justify-content:center;margin-bottom:10px}
 footer{border-top:1px solid var(--line);padding-block:32px 48px;color:var(--ink-3);font-size:14px}
 .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}.foot div{display:flex;gap:20px;flex-wrap:wrap}.foot a{color:var(--ink-3);text-decoration:none}.foot a:hover{color:var(--ink)}
 @media (max-width:900px){.hero{grid-template-columns:1fr;gap:72px}.links{display:none}.stats{grid-template-columns:1fr 1fr}
-.steps,.pipe,.judge,.checks,.priv,.phones{grid-template-columns:1fr}section{padding-block:72px}.stage{padding-top:120px}.stage .pal{left:0;top:-20px}}
+.steps,.pipe,.judge,.checks,.priv,.phones,.oss{grid-template-columns:1fr}section{padding-block:72px}.stage{padding-top:120px}.stage .pal{left:0;top:-20px}}
 @media (max-width:620px){.swipe{display:block}.fig{padding:20px 16px 14px}}
 @media (max-width:480px){.stats{grid-template-columns:1fr}.nav .btn{display:none}}
 """
@@ -372,7 +380,7 @@ def page():
 </head><body>
 <nav><div class="wrap nav">
   <a href="#" class="brand">{logo}Heed</a>
-  <div class="links"><a href="#how">How it works</a><a href="#app">The app</a><a href="#quality">Quality</a><a href="#search">Search</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a></div>
+  <div class="links"><a href="#how">How it works</a><a href="#app">The app</a><a href="#quality">Quality</a><a href="#search">Search</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a><a href="{GITHUB}" target="_blank" rel="noopener">GitHub</a><a href="{HF}" target="_blank" rel="noopener">Hugging Face</a></div>
   <a class="btn sm" href="{PLAY}" target="_blank" rel="noopener">Get it free</a>
 </div></nav>
 
@@ -466,6 +474,7 @@ def page():
     <li>Claude Haiku 5.5 and Gemini 3.5 Flash are better (+10 and +16 points). We don't claim otherwise.</li>
     <li>Cloud models ran with their default settings; GPT-5.4 mini might do better with more reasoning.</li>
     <li>All numbers come from a sealed set of 617 notes that was used once, at the end, with the exact model file the app ships running on a mid-range phone.</li>
+    <li>The full method is in <a href="{HF_STUDY}" target="_blank" rel="noopener">the study on Hugging Face</a>. <a href="{HF_DATA}" target="_blank" rel="noopener">The dataset</a> has the synthetic test notes, every system's answers, the judge's verdicts and the scoring script. The real notes stay private.</li>
   </ul></div></div>
 </div></section>
 
@@ -500,6 +509,18 @@ def page():
   </div>
 </div></section>
 
+<section id="open"><div class="wrap">
+  <div class="head"><span class="kicker">Open source</span><h2 style="margin-top:16px">Don't take our word for it. <mark class="g">Read the code.</mark></h2>
+  <p class="lede">The code is open source under Apache 2.0, and the model, dataset and full study are on Hugging Face.</p></div>
+  <div class="oss">
+    <a class="card" href="{GITHUB}" target="_blank" rel="noopener"><div class="e">💻</div><h3>Source code</h3><p>The Android app on GitHub, under Apache 2.0.</p></a>
+    <a class="card" href="{HF_MODEL}" target="_blank" rel="noopener"><div class="e">🤖</div><h3>The model</h3><p>Qwen3 0.6B, fine-tuned to turn notes into tasks.</p></a>
+    <a class="card" href="{HF_DATA}" target="_blank" rel="noopener"><div class="e">📚</div><h3>The dataset</h3><p>Synthetic notes and labels, test answers, judge verdicts and the scoring script.</p></a>
+    <a class="card" href="{HF_STUDY}" target="_blank" rel="noopener"><div class="e">📝</div><h3>The study</h3><p>How Heed was built and how it was measured.</p></a>
+  </div>
+  <p class="more"><a href="{HF}" target="_blank" rel="noopener">Everything in one place on Hugging Face →</a></p>
+</div></section>
+
 <section id="faq"><div class="wrap">
   <div class="head"><span class="kicker">FAQ</span><h2 style="margin-top:16px">Questions</h2></div>
   <div class="faq">{faq}</div>
@@ -515,7 +536,7 @@ def page():
 
 <footer><div class="wrap foot">
   <span>© 2026 Heed · Android · English</span>
-  <div><a href="#how">How it works</a><a href="#quality">Quality</a><a href="#search">Search</a><a href="/privacy">Privacy policy</a><a href="{PLAY}" target="_blank" rel="noopener">Google Play</a></div>
+  <div><a href="#how">How it works</a><a href="#quality">Quality</a><a href="#search">Search</a><a href="/privacy">Privacy policy</a><a href="{PLAY}" target="_blank" rel="noopener">Google Play</a><a href="{GITHUB}" target="_blank" rel="noopener">GitHub</a><a href="{HF}" target="_blank" rel="noopener">Hugging Face</a></div>
 </div></footer>
 <div id="tip" role="tooltip"></div>
 <script>
