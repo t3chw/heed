@@ -3,8 +3,7 @@
     python3 _src/build.py
 
 Every number comes from the Heed research log (heed-research, EXP-063 search, EXP-064 task quality).
-Task quality is on the validation set (451 notes not used for training); swap in the sealed-test numbers
-when they are final and set EVAL_SET accordingly.
+Task quality is the EXP-064 sealed test: 617 notes, used once, Heed's int8 model on a OnePlus phone (Step 75, D180).
 """
 import html
 import math
@@ -15,23 +14,23 @@ ROOT = Path(__file__).resolve().parents[1]
 PLAY = "https://play.google.com/store/apps/details?id=com.heedapp.android&amp;hl=en"
 
 # ---------------------------------------------------------------- numbers
-EVAL_SET = "451 voice notes held out from training, 59 of them real"
+EVAL_SET = "617 sealed test notes never used for training or tuning, 126 of them real; Heed ran on a real phone"
 # judged task quality (F1, 0-100), all notes and real notes; Gemini 3.1 Pro, blind
 TASKS = [
     # name, where it runs, all notes, real notes, is_heed
-    ("Claude Sonnet 5.5", "Cloud · Heed's teacher", 94.3, 93.8, False),
-    ("Gemini 3.5 Flash", "Cloud", 91.8, 93.0, False),
-    ("Claude Haiku 5.5", "Cloud", 87.7, 91.7, False),
-    ("Heed (Qwen3 0.6B)", "On your phone · offline", 79.4, 86.2, True),
-    ("GPT-5.4 mini", "Cloud", 61.3, 73.9, False),
+    ("Claude Sonnet 5.5", "Cloud · Heed's teacher", 94.8, 95.1, False),
+    ("Gemini 3.5 Flash", "Cloud", 91.8, 94.2, False),
+    ("Claude Haiku 5.5", "Cloud", 85.6, 92.0, False),
+    ("Heed (Qwen3 0.6B)", "On your phone · offline", 75.6, 80.1, True),
+    ("GPT-5.4 mini", "Cloud", 55.5, 75.3, False),
 ]
 # second judge, GPT-5.4, same 100 notes
-CHECK = [("Gemini 3.5 Flash", 87.9), ("Claude Sonnet 5.5", 86.4), ("Claude Haiku 5.5", 82.4), ("Heed", 71.8), ("GPT-5.4 mini", 65.3)]
+CHECK = [("Claude Sonnet 5.5", 85.9), ("Gemini 3.5 Flash", 82.8), ("Claude Haiku 5.5", 81.0), ("Heed", 74.0), ("GPT-5.4 mini", 63.7)]
 LENGTH = {  # judged quality by note length (words)
     "bins": ["under 15", "15–39", "40–99", "100+"],
-    "Heed": [91.7, 83.9, 77.0, 77.5],
-    "Claude Haiku 5.5": [91.0, 89.9, 87.3, 86.6],
-    "Claude Sonnet 5.5": [92.9, 93.0, 95.5, 93.9],
+    "Heed": [81.9, 82.9, 70.5, 78.3],
+    "Claude Haiku 5.5": [88.0, 93.0, 82.6, 85.9],
+    "Claude Sonnet 5.5": [91.7, 96.1, 95.2, 93.7],
 }
 # search: nDCG@10 on held-out users vs median search time on the phone (ms); OnePlus CPH2717
 SEARCH = [
@@ -84,7 +83,7 @@ def bar(x, y, w, h, r=4):
 
 def dots_real():
     W, L, R, top, rh = 680, 200, 40, 30, 38
-    lo, hi = 60, 100
+    lo, hi = 50, 100
     x = lambda v: L + (W - L - R) * (v - lo) / (hi - lo)
     out = []
     for i, (n, _, a, r, me) in enumerate(TASKS):
@@ -99,8 +98,8 @@ def dots_real():
     h = top + len(TASKS) * rh
     grid = "".join(f'<line x1="{x(t)}" x2="{x(t)}" y1="{top - 18}" y2="{h - rh + 14}" class="grid"/>'
                    f'<text x="{x(t)}" y="{h - rh + 32}" class="t-axis" text-anchor="middle">{t}</text>' for t in range(lo, hi + 1, 10))
-    legend = (f'<circle cx="{L}" cy="8" r="5.5" class="dot-open s-base"/><text x="{L + 12}" y="12" class="t-sub">All 451 notes</text>'
-              f'<circle cx="{L + 130}" cy="8" r="6" class="dot s-base"/><text x="{L + 142}" y="12" class="t-sub">The 59 real voice notes</text>')
+    legend = (f'<circle cx="{L}" cy="8" r="5.5" class="dot-open s-base"/><text x="{L + 12}" y="12" class="t-sub">All 617 notes</text>'
+              f'<circle cx="{L + 130}" cy="8" r="6" class="dot s-base"/><text x="{L + 142}" y="12" class="t-sub">The 126 real voice notes</text>')
     return svg(W, h - rh + 40, legend + grid + "".join(out), "Quality on all notes and on real voice notes")
 
 
@@ -441,13 +440,13 @@ def page():
     {table(["System", "Runs", "All notes", "Real voice notes"], task_rows)}
   </div>
   <div class="fig">
-    <h3>On real voice notes, the gap narrows</h3>
-    <p class="cap">On the 59 real notes Heed scores {heed[3]:.1f}: {pct_real}% of Sonnet and {round(100 * heed[3] / TASKS[2][3])}% of Claude Haiku.</p>
+    <h3>On real voice notes: {pct_real}% of Sonnet</h3>
+    <p class="cap">On the 126 real notes Heed scores {heed[3]:.1f}, {pct_real}% of Sonnet. Every model does better on real notes, which are shorter; GPT-5.4 mini gains the most and is level with Heed there.</p>
     {chart(dots_real())}
   </div>
   <div class="fig">
-    <h3>Where it still loses: long notes</h3>
-    <p class="cap">On short notes Heed matches Claude Haiku. Past about 40 words a small model starts dropping details, and that's what we're working on next.</p>
+    <h3>Where it still loses: rambling notes</h3>
+    <p class="cap">The gap is smallest on short notes and largest on 40–99-word rambles, where a small model starts dropping details. That's what we're working on next.</p>
     {chart(lines_length())}
   </div>
 
@@ -464,9 +463,9 @@ def page():
     <div class="check"><div class="v">Same order</div><div class="l">from a second judge, GPT-5.4: Heed {CHECK[3][1]:.1f}, GPT-5.4 mini {CHECK[4][1]:.1f}</div></div>
   </div>
   <div class="callout"><div class="e">💡</div><div><h4>The honest small print</h4><ul>
-    <li>Claude Haiku 5.5 and Gemini 3.5 Flash are better overall (+8 and +12 points). We don't claim otherwise.</li>
+    <li>Claude Haiku 5.5 and Gemini 3.5 Flash are better (+10 and +16 points). We don't claim otherwise.</li>
     <li>Cloud models ran with their default settings; GPT-5.4 mini might do better with more reasoning.</li>
-    <li>These are validation numbers. A sealed set of 617 never-seen notes, with Heed running on a real phone, gives the final figure.</li>
+    <li>All numbers come from a sealed set of 617 notes that was used once, at the end, with the exact model file the app ships running on a mid-range phone.</li>
   </ul></div></div>
 </div></section>
 
